@@ -1,43 +1,54 @@
 package score;
 
 /**
- * 学生实体类：封装学生的基本信息
+ * 5.1 Student.java（Model 模型层）
+ *
+ * 学生实体类：封装学生基本信息。
+ * 字段命名与《代码框架》文档保持一致。
  */
 public class Student {
 
-    private String id;        // 学号
-    private String name;      // 姓名
-    private String gender;    // 性别
-    private String className; // 班级
-    private int age;          // 年龄
+    private String studentId;    // 学号
+    private String studentName;  // 姓名
+    private String gender;       // 性别
+    private String className;    // 班级
+    private int age;             // 年龄
 
     /** 无参构造方法 */
     public Student() {
     }
 
-    /** 有参构造方法 */
-    public Student(String id, String name, String gender, String className, int age) {
-        this.id = id;
-        this.name = name;
+    /** 有参构造方法（不含年龄，年龄默认 0） */
+    public Student(String studentId, String studentName, String gender, String className) {
+        this.studentId = studentId;
+        this.studentName = studentName;
+        this.gender = gender;
+        this.className = className;
+    }
+
+    /** 有参构造方法（完整五项） */
+    public Student(String studentId, String studentName, String gender, String className, int age) {
+        this.studentId = studentId;
+        this.studentName = studentName;
         this.gender = gender;
         this.className = className;
         this.age = age;
     }
 
-    public String getId() {
-        return id;
+    public String getStudentId() {
+        return studentId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setStudentId(String studentId) {
+        this.studentId = studentId;
     }
 
-    public String getName() {
-        return name;
+    public String getStudentName() {
+        return studentName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setStudentName(String studentName) {
+        this.studentName = studentName;
     }
 
     public String getGender() {
@@ -66,7 +77,6 @@ public class Student {
 
     @Override
     public String toString() {
-        return "学号=" + id + "，姓名=" + name + "，性别=" + gender
-                + "，班级=" + className + "，年龄=" + age;
+        return studentId + "\t" + studentName + "\t" + gender + "\t" + className + "\t" + age;
     }
 }

@@ -15,6 +15,12 @@ out/
 *.ear
 hs_err_pid*
 
+### 程序运行时生成的数据文件（跑代码产生的，不入库）###
+*.dat
+objectStream.txt
+printStream.txt
+reader.txt
+
 ### Eclipse ###
 .apt_generated
 .classpath
