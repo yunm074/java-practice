@@ -21,6 +21,9 @@ objectStream.txt
 printStream.txt
 reader.txt
 
+### 本机专用的小工具（只在这台电脑上用，不进版本库）###
+一键推送.bat
+
 ### Eclipse ###
 .apt_generated
 .classpath
