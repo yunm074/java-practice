@@ -3,13 +3,6 @@ package lian;
 import java.util.HashSet;
 import java.util.TreeSet;
 
-/**
- * HashSet -> TreeSet 转换及 TreeSet 方法完整演示
- *
- * 一、创建 HashSet 并添加元素
- * 二、基于 HashSet 创建 TreeSet（TreeSet 构造器可接收 Collection）
- * 三、输出：所有元素、first()、last()、headSet()、tailSet()、ceiling()
- */
 public class TreeSetDemo {
 
     public static void main(String[] args) {
