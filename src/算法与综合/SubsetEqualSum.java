@@ -1,0 +1,30 @@
+package 算法与综合;
+import java.util.Scanner;
+
+public class SubsetEqualSum {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        int sum = 0;
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+            sum += arr[i];
+        }
+        // 总和奇数直接不行
+        if (sum % 2 != 0) {
+            System.out.println("NO");
+            return;
+        }
+        int target = sum / 2;
+        boolean[] dp = new boolean[target + 1];
+        dp[0] = true;
+
+        for (int num : arr) {
+            for (int j = target; j >= num; j--) {
+                dp[j] = dp[j] || dp[j - num];
+            }
+        }
+        System.out.println(dp[target] ? "YES" : "NO");
+    }
+}
